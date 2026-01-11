@@ -23,20 +23,20 @@ Write Back (WB) – Writes results back to the register file
 
 The design correctly handles all major pipeline hazards:
 
- Data Hazards
+1] Data Hazards
 
 RAW hazards resolved using forwarding paths (EX/MEM → EX, MEM/WB → EX)
 
 Load-use hazards handled via pipeline stalling
 
- Control Hazards
+2] Control Hazards
 
 Branch and jump instructions resolved in the EX stage
 
 Incorrectly fetched instructions are flushed from the pipeline
 pipeline
 
- Structural Hazards
+3] Structural Hazards
 
 Avoided by using separate instruction and data memories (Harvard-style architecture)
 
