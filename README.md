@@ -41,21 +41,20 @@ pipeline
 Avoided by using separate instruction and data memories (Harvard-style architecture)
 
 
- --> RTL Modules
 
-riscv_pipeline_top.v – Top-level pipeline integration
+RISC-V RTL Modules/
+├── src/
+│   └── riscv_pipeline_top.v
+│   ├── rv32i_alu.v
+│   ├── rv32i_control.v
+│   ├── rv32i_regfile.v
+│   ├── rv32i_imm_gen.v
+│   ├── rv32i_forward_hazard.v
+│   ├── rv32i_mem.v
 
-rv32i_alu.v – ALU supporting RV32I operations
+├── tb/
+│   └── tb_riscv_pipeline.v
 
-rv32i_control.v – Main control unit
-
-rv32i_regfile.v – 32×32-bit register file
-
-rv32i_imm_gen.v – Immediate value generator
-
-rv32i_forward_hazard.v – Forwarding and hazard detection unit
-
-rv32i_mem.v – Instruction and data memory
 
 schemetic of the 32 bit processor using vivado:
 <img width="951" height="425" alt="image" src="https://github.com/user-attachments/assets/438d735d-8006-4e41-a5dd-4e5e3490e6e7" />
